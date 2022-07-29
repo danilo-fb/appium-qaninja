@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220726 22:45:45.498" rpa="false" schemaversion="3">
+<suite id="s1" name="Nav" source="C:\qaninja\twp\tests\nav.robot">
+<test id="s1-t1" name="Deve acessar a tela Dialogs" line="12">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220726 22:45:45.910" endtime="20220726 22:45:45.911"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220726 22:45:48.074" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:48.070" endtime="20220726 22:45:48.080"/>
+</kw>
+<msg timestamp="20220726 22:45:48.084" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:48.087" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'C:\qaninja\twp\tests/app/twp.apk' does not exist or is not accessible
+</msg>
+<status status="FAIL" starttime="20220726 22:45:45.912" endtime="20220726 22:45:48.088"/>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:45.909" endtime="20220726 22:45:48.089"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220726 22:45:48.092" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:48.091" endtime="20220726 22:45:48.092"/>
+</kw>
+<msg timestamp="20220726 22:45:48.094" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:48.097" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:48.090" endtime="20220726 22:45:48.097"/>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:48.090" endtime="20220726 22:45:48.098">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:45.908" endtime="20220726 22:45:48.099">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'C:\qaninja\twp\tests/app/twp.apk' does not exist or is not accessible
+
+
+Also teardown failed:
+No application is open</status>
+</test>
+<test id="s1-t2" name="Deve acessar a tela de formulários" line="24">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220726 22:45:48.104" endtime="20220726 22:45:48.105"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220726 22:45:50.158" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:50.154" endtime="20220726 22:45:50.160"/>
+</kw>
+<msg timestamp="20220726 22:45:50.164" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:50.170" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'C:\qaninja\twp\tests/app/twp.apk' does not exist or is not accessible
+</msg>
+<status status="FAIL" starttime="20220726 22:45:48.105" endtime="20220726 22:45:50.171"/>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:48.104" endtime="20220726 22:45:50.172"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220726 22:45:50.175" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:50.174" endtime="20220726 22:45:50.177"/>
+</kw>
+<msg timestamp="20220726 22:45:50.178" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:50.182" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:50.174" endtime="20220726 22:45:50.183"/>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:50.172" endtime="20220726 22:45:50.183">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:48.103" endtime="20220726 22:45:50.185">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'C:\qaninja\twp\tests/app/twp.apk' does not exist or is not accessible
+
+
+Also teardown failed:
+No application is open</status>
+</test>
+<test id="s1-t3" name="Deve acessar a tela de Vingadores" line="34">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220726 22:45:50.192" endtime="20220726 22:45:50.192"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220726 22:45:52.261" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:52.258" endtime="20220726 22:45:52.264"/>
+</kw>
+<msg timestamp="20220726 22:45:52.269" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:52.277" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'C:\qaninja\twp\tests/app/twp.apk' does not exist or is not accessible
+</msg>
+<status status="FAIL" starttime="20220726 22:45:50.192" endtime="20220726 22:45:52.279"/>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:50.191" endtime="20220726 22:45:52.281"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220726 22:45:52.288" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:52.285" endtime="20220726 22:45:52.289"/>
+</kw>
+<msg timestamp="20220726 22:45:52.293" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:52.298" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220726 22:45:52.283" endtime="20220726 22:45:52.299"/>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:52.282" endtime="20220726 22:45:52.299">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20220726 22:45:50.190" endtime="20220726 22:45:52.301">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'C:\qaninja\twp\tests/app/twp.apk' does not exist or is not accessible
+
+
+Also teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" starttime="20220726 22:45:45.501" endtime="20220726 22:45:52.305"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Nav">Nav</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220726 22:45:48.084" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:48.094" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:50.164" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:50.178" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:52.269" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220726 22:45:52.293" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

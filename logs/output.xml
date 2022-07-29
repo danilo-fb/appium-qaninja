@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220729 17:01:18.340" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\qaninja\twp\tests">
+<suite id="s1-s1" name="Buttons" source="C:\qaninja\twp\tests\buttons.robot">
+<test id="s1-s1-t1" name="Deve realizar um clique simples" line="9">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:01:18.794" endtime="20220729 17:01:18.794"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:01:18.794" endtime="20220729 17:01:39.342"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:01:39.343" endtime="20220729 17:01:43.522"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:01:43.522" endtime="20220729 17:01:45.338"/>
+</kw>
+<status status="PASS" starttime="20220729 17:01:39.342" endtime="20220729 17:01:45.339"/>
+</kw>
+<status status="PASS" starttime="20220729 17:01:18.793" endtime="20220729 17:01:45.339"/>
+</kw>
+<kw name="Go to Short Click" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:01:45.351" endtime="20220729 17:01:46.960"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:01:46.967" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:01:46.961" endtime="20220729 17:01:47.280"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:01:47.281" endtime="20220729 17:01:48.272"/>
+</kw>
+<status status="PASS" starttime="20220729 17:01:45.350" endtime="20220729 17:01:48.272"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>BOTÕES</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:01:48.273" endtime="20220729 17:01:48.836"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>CLIQUE SIMPLES</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:01:48.836" endtime="20220729 17:01:49.718"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>CLIQUE SIMPLES</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:01:49.718" endtime="20220729 17:01:50.052"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Botão clique simples</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:01:50.052" endtime="20220729 17:01:51.282"/>
+</kw>
+<status status="PASS" starttime="20220729 17:01:45.349" endtime="20220729 17:01:51.282"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/short_click</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:01:51.290" level="INFO">Clicking element 'id=io.qaninja.android.twp:id/short_click'.</msg>
+<status status="PASS" starttime="20220729 17:01:51.286" endtime="20220729 17:01:51.416"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Isso é um clique simples</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:01:51.423" endtime="20220729 17:01:51.939"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:01:52.701" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:01:51.943" endtime="20220729 17:01:52.701"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:01:52.701" endtime="20220729 17:01:54.585"/>
+</kw>
+<status status="PASS" starttime="20220729 17:01:51.942" endtime="20220729 17:01:54.586"/>
+</kw>
+<tag>short</tag>
+<status status="PASS" starttime="20220729 17:01:18.791" endtime="20220729 17:01:54.592"/>
+</test>
+<test id="s1-s1-t2" name="Deve realizar um clique longo" line="18">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:01:54.598" endtime="20220729 17:01:54.598"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:01:54.599" endtime="20220729 17:02:14.865"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:02:14.867" endtime="20220729 17:02:18.879"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:02:18.880" endtime="20220729 17:02:20.420"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:14.865" endtime="20220729 17:02:20.420"/>
+</kw>
+<status status="PASS" starttime="20220729 17:01:54.597" endtime="20220729 17:02:20.420"/>
+</kw>
+<kw name="Go to Long Click" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:02:20.423" endtime="20220729 17:02:22.091"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:02:22.096" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:02:22.092" endtime="20220729 17:02:22.469"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:02:22.470" endtime="20220729 17:02:23.499"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:20.422" endtime="20220729 17:02:23.500"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>BOTÕES</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:02:23.501" endtime="20220729 17:02:23.953"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>CLIQUE LONGO</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:02:23.953" endtime="20220729 17:02:24.690"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>CLIQUE LONGO</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:02:24.690" endtime="20220729 17:02:25.160"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Botão clique longo</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:02:25.161" endtime="20220729 17:02:26.430"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:20.421" endtime="20220729 17:02:26.431"/>
+</kw>
+<kw name="Long Press" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/long_click</arg>
+<arg>1000</arg>
+<doc>Long press the element with optional duration</doc>
+<status status="PASS" starttime="20220729 17:02:26.431" endtime="20220729 17:02:29.196"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>CLIQUE LONGO OK</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:02:29.197" endtime="20220729 17:02:29.293"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:02:29.847" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:02:29.295" endtime="20220729 17:02:29.847"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:02:29.848" endtime="20220729 17:02:31.501"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:29.294" endtime="20220729 17:02:31.501"/>
+</kw>
+<tag>long</tag>
+<status status="PASS" starttime="20220729 17:01:54.595" endtime="20220729 17:02:31.511"/>
+</test>
+<status status="PASS" starttime="20220729 17:01:18.390" endtime="20220729 17:02:31.514"/>
+</suite>
+<suite id="s1-s2" name="Checkbox" source="C:\qaninja\twp\tests\checkbox.robot">
+<test id="s1-s2-t1" name="Deve marcar a opção Robot Framework" line="9">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:02:31.564" endtime="20220729 17:02:31.564"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:02:31.564" endtime="20220729 17:02:50.256"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:02:50.258" endtime="20220729 17:02:55.358"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:02:55.358" endtime="20220729 17:02:57.305"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:50.256" endtime="20220729 17:02:57.306"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:31.563" endtime="20220729 17:02:57.307"/>
+</kw>
+<kw name="Go To Checkbox" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:02:57.311" endtime="20220729 17:02:58.838"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:02:58.843" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:02:58.839" endtime="20220729 17:02:59.221"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:02:59.221" endtime="20220729 17:03:00.132"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:57.310" endtime="20220729 17:03:00.132"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>INPUTS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:03:00.133" endtime="20220729 17:03:00.602"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>INPUTS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:03:00.603" endtime="20220729 17:03:01.448"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>CHECKBOX</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:03:01.449" endtime="20220729 17:03:02.068"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Marque as techs que usam Appium</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:03:02.068" endtime="20220729 17:03:03.872"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:57.309" endtime="20220729 17:03:03.872"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element_robot}</var>
+<arg>xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220729 17:03:03.878" level="INFO">${element_robot} = xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]</msg>
+<status status="PASS" starttime="20220729 17:03:03.878" endtime="20220729 17:03:03.878"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${element_robot}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:03:03.881" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]'.</msg>
+<status status="PASS" starttime="20220729 17:03:03.879" endtime="20220729 17:03:04.312"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/rvContainer</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:03:04.333" endtime="20220729 17:03:05.553"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${element_robot}</arg>
+<arg>checked</arg>
+<arg>true</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220729 17:03:05.802" level="INFO">Element 'xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]' attribute 'checked' is 'true' </msg>
+<status status="PASS" starttime="20220729 17:03:05.554" endtime="20220729 17:03:05.802"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:03:06.455" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:03:05.804" endtime="20220729 17:03:06.455"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:03:06.455" endtime="20220729 17:03:08.236"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:05.803" endtime="20220729 17:03:08.236"/>
+</kw>
+<status status="PASS" starttime="20220729 17:02:31.560" endtime="20220729 17:03:08.237"/>
+</test>
+<status status="PASS" starttime="20220729 17:02:31.527" endtime="20220729 17:03:08.248"/>
+</suite>
+<suite id="s1-s3" name="Drag-And-Drop" source="C:\qaninja\twp\tests\drag-and-drop.robot">
+<test id="s1-s3-t1" name="Deve mover o Hulk para o topo da lista" line="10">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:03:08.280" endtime="20220729 17:03:08.281"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:03:08.281" endtime="20220729 17:03:27.347"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:03:27.350" endtime="20220729 17:03:31.652"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:03:31.653" endtime="20220729 17:03:33.259"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:27.348" endtime="20220729 17:03:33.259"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:08.279" endtime="20220729 17:03:33.260"/>
+</kw>
+<kw name="Go to Avenger List" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:03:33.262" endtime="20220729 17:03:34.787"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:03:34.793" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:03:34.788" endtime="20220729 17:03:35.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:03:35.137" endtime="20220729 17:03:36.158"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:33.262" endtime="20220729 17:03:36.158"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>AVENGERS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:03:36.158" endtime="20220729 17:03:36.664"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>AVENGERS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:03:36.664" endtime="20220729 17:03:37.259"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>LISTA</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:03:37.259" endtime="20220729 17:03:37.809"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>LISTA</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:03:37.809" endtime="20220729 17:03:39.356"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:33.261" endtime="20220729 17:03:39.357"/>
+</kw>
+<kw name="Drag And Drop" library="extend">
+<arg>io.qaninja.android.twp:id/drag_handle</arg>
+<arg>3</arg>
+<arg>0</arg>
+<status status="PASS" starttime="20220729 17:03:39.361" endtime="20220729 17:03:51.050"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220729 17:03:56.060" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220729 17:03:51.050" endtime="20220729 17:03:56.060"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:03:56.632" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:03:56.061" endtime="20220729 17:03:56.633"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:03:56.633" endtime="20220729 17:03:58.324"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:56.060" endtime="20220729 17:03:58.325"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:08.277" endtime="20220729 17:03:58.331"/>
+</test>
+<status status="PASS" starttime="20220729 17:03:08.253" endtime="20220729 17:03:58.333"/>
+</suite>
+<suite id="s1-s4" name="Home" source="C:\qaninja\twp\tests\home.robot">
+<test id="s1-s4-t1" name="Deve abrir a tela principal" line="10">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:03:58.348" endtime="20220729 17:04:17.708"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Training Wheels Protocol</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:04:17.717" endtime="20220729 17:04:22.020"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Mobile Version</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:04:22.022" endtime="20220729 17:04:22.244"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:04:22.246" endtime="20220729 17:04:23.479"/>
+</kw>
+<status status="PASS" starttime="20220729 17:03:58.346" endtime="20220729 17:04:23.483"/>
+</test>
+<status status="PASS" starttime="20220729 17:03:58.336" endtime="20220729 17:04:23.489"/>
+</suite>
+<suite id="s1-s5" name="Login" source="C:\qaninja\twp\tests\login.robot">
+<test id="s1-s5-t1" name="Deve logar com sucesso" line="9">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:04:23.543" endtime="20220729 17:04:23.544"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:04:23.544" endtime="20220729 17:04:41.837"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:04:41.839" endtime="20220729 17:04:46.589"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:04:46.590" endtime="20220729 17:04:48.268"/>
+</kw>
+<status status="PASS" starttime="20220729 17:04:41.837" endtime="20220729 17:04:48.269"/>
+</kw>
+<status status="PASS" starttime="20220729 17:04:23.542" endtime="20220729 17:04:48.269"/>
+</kw>
+<kw name="Go To Login Form" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:04:48.272" endtime="20220729 17:04:49.781"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:04:49.787" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:04:49.782" endtime="20220729 17:04:50.091"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:04:50.092" endtime="20220729 17:04:51.082"/>
+</kw>
+<status status="PASS" starttime="20220729 17:04:48.271" endtime="20220729 17:04:51.083"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:04:51.083" endtime="20220729 17:04:51.553"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:04:51.553" endtime="20220729 17:04:52.364"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>LOGIN</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:04:52.364" endtime="20220729 17:04:52.990"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Fala QA, vamos testar o login?</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:04:52.991" endtime="20220729 17:04:55.074"/>
+</kw>
+<status status="PASS" starttime="20220729 17:04:48.270" endtime="20220729 17:04:55.075"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/etEmail</arg>
+<arg>eu@papito.io</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220729 17:04:55.081" level="INFO">Typing text 'eu@papito.io' into text field 'id=io.qaninja.android.twp:id/etEmail'</msg>
+<status status="PASS" starttime="20220729 17:04:55.075" endtime="20220729 17:04:55.806"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/etPassword</arg>
+<arg>qaninja</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220729 17:04:55.817" level="INFO">Typing text 'qaninja' into text field 'id=io.qaninja.android.twp:id/etPassword'</msg>
+<status status="PASS" starttime="20220729 17:04:55.811" endtime="20220729 17:04:56.427"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=io.qaninja.android.twp:id/btnSubmit</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:04:56.433" level="INFO">Clicking element 'id=io.qaninja.android.twp:id/btnSubmit'.</msg>
+<status status="PASS" starttime="20220729 17:04:56.428" endtime="20220729 17:04:57.004"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Show! Suas credenciais são validas.</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:04:57.005" endtime="20220729 17:04:57.447"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:04:58.180" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:04:57.450" endtime="20220729 17:04:58.180"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:04:58.180" endtime="20220729 17:05:00.309"/>
+</kw>
+<status status="PASS" starttime="20220729 17:04:57.449" endtime="20220729 17:05:00.309"/>
+</kw>
+<status status="PASS" starttime="20220729 17:04:23.533" endtime="20220729 17:05:00.314"/>
+</test>
+<status status="PASS" starttime="20220729 17:04:23.496" endtime="20220729 17:05:00.316"/>
+</suite>
+<suite id="s1-s6" name="Nav" source="C:\qaninja\twp\tests\nav.robot">
+<test id="s1-s6-t1" name="Deve acessar a tela Dialogs" line="14">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:05:00.359" endtime="20220729 17:05:00.360"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:05:00.360" endtime="20220729 17:05:17.390"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:05:17.391" endtime="20220729 17:05:21.834"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:05:21.834" endtime="20220729 17:05:23.360"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:17.390" endtime="20220729 17:05:23.361"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:00.358" endtime="20220729 17:05:23.362"/>
+</kw>
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:05:23.368" endtime="20220729 17:05:24.785"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:05:24.788" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:05:24.785" endtime="20220729 17:05:25.058"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:05:25.058" endtime="20220729 17:05:26.101"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:23.367" endtime="20220729 17:05:26.102"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>DIALOGS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:05:26.103" endtime="20220729 17:05:26.529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:05:26.535" endtime="20220729 17:05:27.483"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<arg>DIALOGS</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220729 17:05:27.490" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'DIALOGS'.</msg>
+<status status="PASS" starttime="20220729 17:05:27.484" endtime="20220729 17:05:27.603"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:05:28.249" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-6.png"&gt;&lt;img src="appium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:05:27.605" endtime="20220729 17:05:28.250"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:05:28.250" endtime="20220729 17:05:29.781"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:27.604" endtime="20220729 17:05:29.782"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:00.357" endtime="20220729 17:05:29.786"/>
+</test>
+<test id="s1-s6-t2" name="Deve acessar a tela de formulários" line="24">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:05:29.792" endtime="20220729 17:05:29.793"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:05:29.793" endtime="20220729 17:05:47.053"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:05:47.053" endtime="20220729 17:05:51.158"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:05:51.158" endtime="20220729 17:05:52.698"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:47.053" endtime="20220729 17:05:52.699"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:29.791" endtime="20220729 17:05:52.700"/>
+</kw>
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:05:52.702" endtime="20220729 17:05:54.209"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:05:54.214" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:05:54.209" endtime="20220729 17:05:54.544"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:05:54.545" endtime="20220729 17:05:55.504"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:52.701" endtime="20220729 17:05:55.504"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:05:55.505" endtime="20220729 17:05:55.964"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:05:55.966" endtime="20220729 17:05:56.928"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<arg>FORMS</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220729 17:05:56.936" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'FORMS'.</msg>
+<status status="PASS" starttime="20220729 17:05:56.931" endtime="20220729 17:05:57.026"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:05:57.564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-7.png"&gt;&lt;img src="appium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:05:57.029" endtime="20220729 17:05:57.565"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:05:57.565" endtime="20220729 17:05:59.171"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:57.028" endtime="20220729 17:05:59.172"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:29.790" endtime="20220729 17:05:59.191"/>
+</test>
+<test id="s1-s6-t3" name="Deve acessar a tela de Vingadores" line="32">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:05:59.204" endtime="20220729 17:05:59.205"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:05:59.205" endtime="20220729 17:06:17.018"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:06:17.019" endtime="20220729 17:06:20.936"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:06:20.936" endtime="20220729 17:06:22.462"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:17.019" endtime="20220729 17:06:22.463"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:59.203" endtime="20220729 17:06:22.463"/>
+</kw>
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:06:22.473" endtime="20220729 17:06:23.980"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:06:23.983" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:06:23.980" endtime="20220729 17:06:24.293"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:06:24.294" endtime="20220729 17:06:25.229"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:22.473" endtime="20220729 17:06:25.230"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>AVENGERS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:06:25.230" endtime="20220729 17:06:25.650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:06:25.651" endtime="20220729 17:06:26.594"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<arg>AVENGERS</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220729 17:06:26.598" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'AVENGERS'.</msg>
+<status status="PASS" starttime="20220729 17:06:26.595" endtime="20220729 17:06:26.704"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:06:27.239" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-8.png"&gt;&lt;img src="appium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:06:26.708" endtime="20220729 17:06:27.239"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:06:27.239" endtime="20220729 17:06:28.800"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:26.706" endtime="20220729 17:06:28.801"/>
+</kw>
+<status status="PASS" starttime="20220729 17:05:59.201" endtime="20220729 17:06:28.808"/>
+</test>
+<status status="PASS" starttime="20220729 17:05:00.330" endtime="20220729 17:06:28.813"/>
+</suite>
+<suite id="s1-s7" name="Radio" source="C:\qaninja\twp\tests\radio.robot">
+<test id="s1-s7-t1" name="Deve selecionar a opção Python" line="10">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:06:28.836" endtime="20220729 17:06:28.836"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:06:28.837" endtime="20220729 17:06:45.690"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:06:45.692" endtime="20220729 17:06:49.903"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:06:49.903" endtime="20220729 17:06:51.361"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:45.691" endtime="20220729 17:06:51.361"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:28.835" endtime="20220729 17:06:51.362"/>
+</kw>
+<kw name="Go To Radion Buttons" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:06:51.364" endtime="20220729 17:06:52.868"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:06:52.873" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:06:52.868" endtime="20220729 17:06:53.210"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:06:53.210" endtime="20220729 17:06:54.307"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:51.364" endtime="20220729 17:06:54.307"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>INPUTS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:06:54.308" endtime="20220729 17:06:54.783"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>INPUTS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:06:54.783" endtime="20220729 17:06:55.481"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>BOTÕES DE RADIO</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:06:55.482" endtime="20220729 17:06:55.905"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Escolha sua linguagem preferida</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:06:55.906" endtime="20220729 17:06:57.348"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:51.363" endtime="20220729 17:06:57.348"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>xpath=//android.widget.RadioButton[contains(@text, 'Python')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220729 17:06:57.350" level="INFO">${element} = xpath=//android.widget.RadioButton[contains(@text, 'Python')]</msg>
+<status status="PASS" starttime="20220729 17:06:57.349" endtime="20220729 17:06:57.350"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:06:57.356" level="INFO">Clicking element 'xpath=//android.widget.RadioButton[contains(@text, 'Python')]'.</msg>
+<status status="PASS" starttime="20220729 17:06:57.350" endtime="20220729 17:06:57.632"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:06:57.633" endtime="20220729 17:06:58.469"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>checked</arg>
+<arg>TRUE</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220729 17:06:58.662" level="INFO">Element 'xpath=//android.widget.RadioButton[contains(@text, 'Python')]' attribute 'checked' is 'TRUE' </msg>
+<status status="PASS" starttime="20220729 17:06:58.470" endtime="20220729 17:06:58.663"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:06:59.185" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-9.png"&gt;&lt;img src="appium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:06:58.664" endtime="20220729 17:06:59.185"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:06:59.186" endtime="20220729 17:07:01.137"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:58.664" endtime="20220729 17:07:01.137"/>
+</kw>
+<status status="PASS" starttime="20220729 17:06:28.834" endtime="20220729 17:07:01.147"/>
+</test>
+<status status="PASS" starttime="20220729 17:06:28.819" endtime="20220729 17:07:01.158"/>
+</suite>
+<suite id="s1-s8" name="Spinner" source="C:\qaninja\twp\tests\spinner.robot">
+<test id="s1-s8-t1" name="Deve selecionar o perfil QA" line="15">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:07:01.201" endtime="20220729 17:07:01.201"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:07:01.202" endtime="20220729 17:07:18.455"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:07:18.457" endtime="20220729 17:07:22.901"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:07:22.902" endtime="20220729 17:07:24.446"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:18.456" endtime="20220729 17:07:24.447"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:01.200" endtime="20220729 17:07:24.447"/>
+</kw>
+<kw name="Go To Signup Form" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:07:24.453" endtime="20220729 17:07:25.841"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:07:25.843" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:07:25.841" endtime="20220729 17:07:26.119"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:07:26.119" endtime="20220729 17:07:27.102"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:24.452" endtime="20220729 17:07:27.103"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:07:27.103" endtime="20220729 17:07:27.584"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:07:27.585" endtime="20220729 17:07:28.288"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>CADASTRO</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:07:28.288" endtime="20220729 17:07:28.760"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Bem-vindo, crie sua conta</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:07:28.761" endtime="20220729 17:07:30.953"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:24.451" endtime="20220729 17:07:30.954"/>
+</kw>
+<kw name="Choice Job">
+<arg>QA</arg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SPINNER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:07:30.962" level="INFO">Clicking element 'id=io.qaninja.android.twp:id/spinnerJob'.</msg>
+<status status="PASS" starttime="20220729 17:07:30.956" endtime="20220729 17:07:31.261"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${LIST_OPTIONS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:07:31.262" endtime="20220729 17:07:32.450"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${target}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:07:32.450" endtime="20220729 17:07:33.375"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:30.955" endtime="20220729 17:07:33.375"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:07:33.961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-10.png"&gt;&lt;img src="appium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:07:33.378" endtime="20220729 17:07:33.961"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:07:33.961" endtime="20220729 17:07:35.766"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:33.377" endtime="20220729 17:07:35.767"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:01.198" endtime="20220729 17:07:35.767"/>
+</test>
+<test id="s1-s8-t2" name="Deve selecionar o perfil DevOps" line="20">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:07:35.786" endtime="20220729 17:07:35.787"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:07:35.787" endtime="20220729 17:07:53.398"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:07:53.399" endtime="20220729 17:07:57.507"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:07:57.507" endtime="20220729 17:07:58.958"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:53.398" endtime="20220729 17:07:58.959"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:35.785" endtime="20220729 17:07:58.959"/>
+</kw>
+<kw name="Go To Signup Form" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:07:58.962" endtime="20220729 17:08:00.392"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:08:00.397" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:08:00.392" endtime="20220729 17:08:00.695"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:08:00.695" endtime="20220729 17:08:01.813"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:58.961" endtime="20220729 17:08:01.813"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:08:01.813" endtime="20220729 17:08:02.295"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>FORMS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:08:02.295" endtime="20220729 17:08:03.179"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>CADASTRO</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:08:03.179" endtime="20220729 17:08:03.561"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Bem-vindo, crie sua conta</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:08:03.561" endtime="20220729 17:08:06.100"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:58.960" endtime="20220729 17:08:06.101"/>
+</kw>
+<kw name="Choice Job">
+<arg>DevOps</arg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SPINNER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:08:06.124" level="INFO">Clicking element 'id=io.qaninja.android.twp:id/spinnerJob'.</msg>
+<status status="PASS" starttime="20220729 17:08:06.118" endtime="20220729 17:08:06.427"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${LIST_OPTIONS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:08:06.427" endtime="20220729 17:08:07.750"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${target}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:08:07.750" endtime="20220729 17:08:08.702"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:06.117" endtime="20220729 17:08:08.702"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:08:09.360" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-11.png"&gt;&lt;img src="appium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:08:08.705" endtime="20220729 17:08:09.361"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:08:09.361" endtime="20220729 17:08:11.316"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:08.704" endtime="20220729 17:08:11.317"/>
+</kw>
+<status status="PASS" starttime="20220729 17:07:35.784" endtime="20220729 17:08:11.318"/>
+</test>
+<status status="PASS" starttime="20220729 17:07:01.177" endtime="20220729 17:08:11.330"/>
+</suite>
+<suite id="s1-s9" name="Swipe" source="C:\qaninja\twp\tests\swipe.robot">
+<test id="s1-s9-t1" name="Deve remover o Capitão América" line="25">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220729 17:08:11.372" endtime="20220729 17:08:11.372"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220729 17:08:11.373" endtime="20220729 17:08:28.507"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:08:28.509" endtime="20220729 17:08:32.981"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:08:32.981" endtime="20220729 17:08:34.537"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:28.508" endtime="20220729 17:08:34.538"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:11.371" endtime="20220729 17:08:34.538"/>
+</kw>
+<kw name="Go to Avenger List" library="helpers">
+<kw name="Open Nav" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:08:34.542" endtime="20220729 17:08:36.155"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HAMBURGUER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:08:36.159" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220729 17:08:36.155" endtime="20220729 17:08:36.494"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:08:36.494" endtime="20220729 17:08:37.443"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:34.541" endtime="20220729 17:08:37.443"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>AVENGERS</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:08:37.444" endtime="20220729 17:08:37.883"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>AVENGERS</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:08:37.883" endtime="20220729 17:08:38.610"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>LISTA</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220729 17:08:38.611" endtime="20220729 17:08:39.103"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>LISTA</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220729 17:08:39.103" endtime="20220729 17:08:41.225"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:34.540" endtime="20220729 17:08:41.226"/>
+</kw>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>88.88</arg>
+<arg>18.22</arg>
+<arg>47.22</arg>
+<arg>18.22</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20220729 17:08:41.285" endtime="20220729 17:08:43.235"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BTN_REMOVE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220729 17:08:43.236" endtime="20220729 17:08:43.351"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BTN_REMOVE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220729 17:08:43.356" level="INFO">Clicking element 'id=io.qaninja.android.twp:id/btnRemove'.</msg>
+<status status="PASS" starttime="20220729 17:08:43.352" endtime="20220729 17:08:43.497"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220729 17:08:48.513" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220729 17:08:43.498" endtime="20220729 17:08:48.513"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220729 17:08:49.062" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-12.png"&gt;&lt;img src="appium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220729 17:08:48.516" endtime="20220729 17:08:49.062"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220729 17:08:49.062" endtime="20220729 17:08:50.651"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:48.514" endtime="20220729 17:08:50.652"/>
+</kw>
+<status status="PASS" starttime="20220729 17:08:11.367" endtime="20220729 17:08:50.663"/>
+</test>
+<status status="PASS" starttime="20220729 17:08:11.337" endtime="20220729 17:08:50.669"/>
+</suite>
+<status status="PASS" starttime="20220729 17:01:18.342" endtime="20220729 17:08:50.677"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">long</stat>
+<stat pass="1" fail="0" skip="0">short</stat>
+</tag>
+<suite>
+<stat pass="13" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Buttons">Tests.Buttons</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Checkbox">Tests.Checkbox</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Drag-And-Drop">Tests.Drag-And-Drop</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Home">Tests.Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="Login">Tests.Login</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s6" name="Nav">Tests.Nav</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s7" name="Radio">Tests.Radio</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s8" name="Spinner">Tests.Spinner</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s9" name="Swipe">Tests.Swipe</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
